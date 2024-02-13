@@ -275,7 +275,6 @@ header .header-topbar {
   z-index: 2;
   right: 0;
   left: 0;
-  visibility: hidden;
 }
 
 header .header-topbar .icon {
