@@ -8,7 +8,7 @@ header nav {
   align-items: center;
   position: fixed;
   z-index: 2;
-  background-color: var(--background-color);
+  background: rgb(4 25 45 / 55%);
   width: 100vw;
   height: var(--nav-height);
   box-sizing: border-box;
@@ -275,6 +275,7 @@ header .header-topbar {
   z-index: 2;
   right: 0;
   left: 0;
+  visibility: hidden;
 }
 
 header .header-topbar .icon {
