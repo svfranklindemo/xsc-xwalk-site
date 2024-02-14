@@ -356,3 +356,7 @@ main .section[data-section-status='initialized'] {
 .cc-btn.cc-save {
   padding: 13px 29px;
 }
+
+.section.blockquote-container {
+  background: white;
+}
