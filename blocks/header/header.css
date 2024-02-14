@@ -350,3 +350,11 @@ header .header-markets {
 header .header-topbar .icon svg {
   height: 100%;
 }
+
+header nav .nav-sections > ul > li[aria-expanded="true"] > ul > li > span.icon {
+  fill: #414042;
+  margin-right: 7px;
+  margin-top: 2px;
+  height: 16px;
+  bottom: 0;
+}
