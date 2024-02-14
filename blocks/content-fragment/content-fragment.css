@@ -86,6 +86,11 @@ section:nth-child(8) {
   color: white;
 }
 
+section:nth-child(8) p {
+ line-height: 1.5em;
+ font-size: 16px;
+}
+
 #slug {
   visibility: hidden;
 }
