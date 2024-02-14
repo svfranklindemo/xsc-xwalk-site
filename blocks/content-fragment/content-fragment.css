@@ -21,7 +21,7 @@ section:nth-child(2) {
   top: 20px;
   left: 50px;
   right: 50px;
-  bottom: 10px;
+  bottom: 40px;
   background-color: rgb(0 0 0 / 40%)
 }
 
@@ -119,3 +119,6 @@ img {
   text-shadow: 1px 1px 2px #000
 }
 
+.section.content-fragment-container {
+  background-color: rgb(0 0 0 / 40%);
+}
