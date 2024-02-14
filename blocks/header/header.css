@@ -352,6 +352,7 @@ header .header-topbar .icon svg {
 }
 
 header nav .nav-sections > ul > li[aria-expanded="true"] > ul > li > span.icon {
+  display: inline-flex;
   fill: #414042;
   margin-right: 7px;
   margin-top: 2px;
