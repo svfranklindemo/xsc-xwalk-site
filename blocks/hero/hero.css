@@ -25,16 +25,28 @@ main .hero .hero-body {
     z-index: 1;
     color: white;
     text-shadow: 1px 1px 2px #000;
+    padding-top: 50px;
+    padding-bottom: 75px;
 }
 
 
 main .hero picture {
-    position: absolute;
+    /* position: absolute;
     top: 0;
     left: 0;
     bottom: 0;
     right: 0;
+    box-sizing: border-box; */
+    position: fixed;
+    z-index: -100;
+    top: calc(var(--nav-height) * -1);
+    left: 0;
+    bottom: 0;
+    right: 0;
+    object-fit: cover;
     box-sizing: border-box;
+    width: 100vw;
+    height: auto; 
 }
 
 main .hero img {
