@@ -289,11 +289,12 @@ header nav .nav-sections > ul > li[aria-expanded="true"] > ul {
   left: -1em;
   width: 660px;
   margin-top: 12px;
-  padding: 1em;
-  background: var(--background-color-nav);
+  padding: 1em; 
   white-space: initial;
   border-radius: 8px;
   columns: 1;
+  background: rgb(255 255 255 / 95%);
+  color: black;
 }
 
 header .header-topbar {
