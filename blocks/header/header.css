@@ -272,7 +272,7 @@ header nav[aria-expanded='true'] .nav-tools li {
     padding: 8px 16px;
   }
 
-/*  header nav .nav-sections > ul > li[aria-expanded='true'] ul {
+ header nav .nav-sections > ul > li[aria-expanded='true'] ul {
     display: block;
     position: absolute;
     background-color: var(--highlight-background-color);
@@ -281,7 +281,7 @@ header nav[aria-expanded='true'] .nav-tools li {
     padding: 16px;
     box-shadow: 0 0 5px var(text-color);
   }
-} */
+} 
 
 header nav .nav-sections > ul > li[aria-expanded="true"] > ul {
   display: block;
