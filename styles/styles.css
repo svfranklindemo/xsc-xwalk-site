@@ -360,3 +360,7 @@ main .section[data-section-status='initialized'] {
 .section.blockquote-container {
   background: white;
 }
+
+.section{
+  background: white;
+}
