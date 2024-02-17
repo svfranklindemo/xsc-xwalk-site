@@ -7,13 +7,15 @@ import { getSiteRoot } from '../../scripts/scripts.js';
  */
 
 export default async function decorate(block) {
-  alert(`${getSiteRoot(2)}`);
   const footerMeta = getMetadata('footer');
   const navPath = footerMeta ? new URL(footerMeta, window.location).pathname : (window.wknd.demoConfig.demoBase || '/footer');
   const footerPath = footerMeta ? new URL(footerMeta).pathname : '/footer';
 
-  /*const resp = await fetch(`${getSiteRoot(5)}${navPath}.plain.html`, window.location.pathname.endsWith('/footer') ? { cache: 'reload' } : {});*/
-  const resp = await fetch(`${footerPath}.plain.html`);
+  if (`${getSiteRoot(2)}`) = '/content' {
+    const resp = await fetch(`${getSiteRoot(5)}${navPath}.plain.html`, window.location.pathname.endsWith('/footer') ? { cache: 'reload' } : {});*/
+    }else{
+    const resp = await fetch(`${footerPath}.plain.html`);
+    }
   if (resp.ok) {
     block.textContent = '';
 
