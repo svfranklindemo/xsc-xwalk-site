@@ -7,7 +7,7 @@ import { getSiteRoot } from '../../scripts/scripts.js';
  */
 
 export default async function decorate(block) {
-  alert(`${getSiteRoot(5)}`);
+  alert(`${getSiteRoot(1)}`);
   const footerMeta = getMetadata('footer');
   const navPath = footerMeta ? new URL(footerMeta, window.location).pathname : (window.wknd.demoConfig.demoBase || '/footer');
   const footerPath = footerMeta ? new URL(footerMeta).pathname : '/footer';
