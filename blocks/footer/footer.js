@@ -13,7 +13,7 @@ export default async function decorate(block) {
 
   if (${getSiteRoot(2)} === "/content") {
     alert("first choice");  
-    const resp = await fetch(`${getSiteRoot(5)}${navPath}.plain.html`, window.location.pathname.endsWith('/footer') ? { cache: 'reload' } : {});*/
+    const resp = await fetch(`${getSiteRoot(5)}${navPath}.plain.html`, window.location.pathname.endsWith('/footer') ? { cache: 'reload' } : {});
     }else{
       alert("second choice");  
       const resp = await fetch(`${footerPath}.plain.html`);
