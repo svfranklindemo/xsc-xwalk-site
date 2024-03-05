@@ -49,7 +49,7 @@ window.hlx.plugins.add('experimentation', {
   url: '/plugins/experimentation/src/index.js',
 });
 
-export function getSiteRoot(level = 2, path = window.location.pathname) {
+export function getSiteRoot(level = 3, path = window.location.pathname) {
   return path.split(/[/.]/, level).join('/');
 }
 
