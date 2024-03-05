@@ -24,7 +24,7 @@ export default async function decorate(block) {
   let navURL = `${getSiteRoot(5)}${navPath}.plain.html`;
   let updatedNavUrl = navURL.replace("about-us/", "/");
 
-  const resp = await fetch(updatedNavUrl, window.location.pathname.endsWith('/nav') ? { cache: 'reload' } : {});
+  const resp = await fetch(updatedNavUrl.replace("//", "/"), window.location.pathname.endsWith('/nav') ? { cache: 'reload' } : {});
   if (resp.ok) {
     const html = await resp.text();
 
