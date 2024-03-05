@@ -22,7 +22,7 @@ export default async function decorate(block) {
   const navPath = navMeta ? new URL(navMeta, window.location).pathname : (window.wknd.demoConfig.demoBase || '/nav');
 
   let navURL = `${getSiteRoot(5)}${navPath}.plain.html`;
-  let updatedNavUrl = navURL.replace("about-us//", "/");
+  let updatedNavUrl = navURL.replace("about-us/", "/");
 
   const resp = await fetch(updatedNavUrl, window.location.pathname.endsWith('/nav') ? { cache: 'reload' } : {});
   if (resp.ok) {
