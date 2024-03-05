@@ -50,7 +50,7 @@ window.hlx.plugins.add('experimentation', {
 });
 
 export function getSiteRoot(level = 3, path = window.location.pathname) {
-  return path.split(/[/.]/, level).join('/');
+  return path.split(/[/.]/, level).join('');
 }
 
 /**
