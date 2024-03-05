@@ -11,10 +11,12 @@ export default async function decorate(block) {
   const navPath = footerMeta ? new URL(footerMeta, window.location).pathname : (window.wknd.demoConfig.demoBase || '/footer');
   const footerPath = footerMeta ? new URL(footerMeta).pathname : '/footer';
 
+  let footerURL = `${getSiteRoot(5)}${navPath}.plain.html`;
+  let updatedFooterUrl = footerURL.replace("//", "/");
+
+  alert(updatedFooterUrl);
+
   const resp = await fetch(`${getSiteRoot(5)}${navPath}.plain.html`, window.location.pathname.endsWith('/footer') ? { cache: 'reload' } : {});
-
-  alert(resp);
-
   /*const resp = await fetch(`${footerPath}.plain.html`);*/
 
   if (resp.ok) {
