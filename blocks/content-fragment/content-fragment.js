@@ -7,7 +7,7 @@ function getMetadata(name) {
 }
 
 //const aem = "http://localhost:4503";
-const aem = "https://author-p46835-e1104134.adobeaemcloud.com/"
+const aem = "https://author-p46835-e1104134.adobeaemcloud.com"
 //const aem = "https://publish-p107058-e1001010.adobeaemcloud.com";
 
 export default function decorate(block) {
