@@ -23,7 +23,7 @@ fetch(aem + '/graphql/execute.json/aem-demo-assets/adventure-by-slug;slug=' + sl
 .then(response => {
 
 const backgroundImage = response.data.adventureList.items[0].primaryImage._path;
-document.getElementById(adventureDiv.id).innerHTML = "<section><img src=" + backgroundImage + "></section>";  
+document.getElementById(adventureDiv.id).innerHTML = "<section><img src=" + aem + backgroundImage + "></section>";  
 
 const adventureTitle = response.data.adventureList.items[0].title;
 document.getElementById(adventureDiv.id).innerHTML += "<section><h3>"+ adventureTitle + "</h3></section>";
