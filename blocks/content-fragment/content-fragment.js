@@ -1,14 +1,6 @@
-function getMetadata(name) {
-  const attr = name && name.includes(':') ? 'property' : 'name';
-  const meta = [...document.querySelectorAll(`meta[${attr}="${name}"]`)]
-    .map((m) => m.content)
-    .join(', ');
-  return meta || '';
-}
-
-//const aem = "http://localhost:4503";
-const aem = "https://author-p46835-e1104134.adobeaemcloud.com"
-//const aem = "https://publish-p107058-e1001010.adobeaemcloud.com";
+// put your AEM author/publish address here
+//const aem = "https://author-p46835-e1104134.adobeaemcloud.com"
+const aem = "https://publish-p46835-e1104134.adobeaemcloud.com";
 
 export default function decorate(block) {
 
