@@ -7,7 +7,8 @@ function getMetadata(name) {
 }
 
 //const aem = "http://localhost:4503";
-const aem = "https://publish-p107058-e1001010.adobeaemcloud.com";
+const aem = "https://author-p46835-e1104134.adobeaemcloud.com/"
+//const aem = "https://publish-p107058-e1001010.adobeaemcloud.com";
 
 export default function decorate(block) {
 
@@ -17,7 +18,7 @@ export default function decorate(block) {
   slugID.id = 'slug';
   slugDiv.replaceWith(slugID);
   slugID.innerHTML = `${slugDiv.innerHTML}`;
-  const slugTemp = slugID.innerHTML.replace(/<div>|<\/div>/g, '');
+  const slugTemp = slugID.innerHTML.replace(/<div data-aue-prop=\"text\" data-aue-label=\"Slug\" data-aue-type=\"text\">|<div>|<\/div>/g, '');
   const slug = slugTemp.match(/\S+/g);
   
   const quoteDiv = block.querySelector('div:last-of-type');
@@ -25,11 +26,11 @@ export default function decorate(block) {
   adventureDiv.id = "adventure-" + slug; 
   quoteDiv.replaceWith(adventureDiv);
 
-fetch(aem + '/graphql/execute.json/aem-demo-assets/adventures-by-slug;slug=' + slug)
+fetch(aem + '/graphql/execute.json/aem-demo-assets/adventure-by-slug;slug=' + slug)
 .then(response => response.json())
 .then(response => {
 
-const backgroundImage = response.data.adventureList.items[0].primaryImage._publishUrl;
+const backgroundImage = response.data.adventureList.items[0].primaryImage._path;
 document.getElementById(adventureDiv.id).innerHTML = "<section><img src=" + backgroundImage + "></section>";  
 
 const adventureTitle = response.data.adventureList.items[0].title;
