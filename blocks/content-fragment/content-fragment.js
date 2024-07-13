@@ -1,6 +1,6 @@
 // put your AEM author/publish address here
 //const aem = "https://author-p46835-e1104134.adobeaemcloud.com"
-const aem = "https://publish-p46835-e1104134.adobeaemcloud.com";
+const aem = "https://publish-p131639-e1282833.adobeaemcloud.com/";
 
 export default function decorate(block) {
 
