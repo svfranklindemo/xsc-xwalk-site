@@ -1,9 +1,7 @@
-// put your AEM author/publish address here
-//const aem = "https://author-p46835-e1104134.adobeaemcloud.com"
-const aem = "https://publish-p131639-e1282833.adobeaemcloud.com/";
+// put your AEM publish address here
+const AEM_HOST = "https://publish-p121371-e1189853.adobeaemcloud.com";
 
 export default function decorate(block) {
-
 
   const slugDiv = block.querySelector('div:nth-child(1)'); 
   const slugID = document.createElement('div');
@@ -18,12 +16,12 @@ export default function decorate(block) {
   adventureDiv.id = "adventure-" + slug; 
   quoteDiv.replaceWith(adventureDiv);
 
-fetch(aem + '/graphql/execute.json/aem-demo-assets/adventure-by-slug;slug=' + slug)
+fetch(AEM_HOST + '/graphql/execute.json/aem-demo-assets/adventure-by-slug;slug=' + slug)
 .then(response => response.json())
 .then(response => {
 
 const backgroundImage = response.data.adventureList.items[0].primaryImage._path;
-document.getElementById(adventureDiv.id).innerHTML = "<section><img src=" + aem + backgroundImage + "></section>";  
+document.getElementById(adventureDiv.id).innerHTML = "<section><img src=" + AEM_HOST + backgroundImage + "></section>";  
 
 const adventureTitle = response.data.adventureList.items[0].title;
 document.getElementById(adventureDiv.id).innerHTML += "<section><h3>"+ adventureTitle + "</h3></section>";
@@ -52,8 +50,3 @@ document.getElementById(adventureDiv.id).innerHTML += "<section>" + "Itinerary: 
 });
 
 }
-
-
-
-
-
